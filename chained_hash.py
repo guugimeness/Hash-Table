@@ -10,7 +10,7 @@ class Chained_Hash():
         index = self.hash_function(key)     # calcular o slot h(key)
         
         if key in self.table[index]:        # não é permitido inserir 2 chaves iguais
-            return
+            return False
         
         self.table[index].append(key)       # inserir key na cabeça da lista
         
@@ -19,7 +19,7 @@ class Chained_Hash():
         count = 0       # contador de acessos
         
         for i in range(len(self.table[index])):     # buscar chave na lista h(key)
-            count=+1
+            count+=1
             if self.table[index][i] == key:
                 print(f"Chave {key} encontrada! O número de acessos nessa busca foi {count}")
                 return True
