@@ -8,12 +8,8 @@ ch_hash = Chained_Hash(43)
 keys = [random.randint(1, 2000) for _ in range(550)]
 
 print("1) Inserir 500 chaves geradas aleatoriamente:")
-i=0
-index=0
-while i<500:
-    if ch_hash.insert(keys[index]):     # não é permitido inserir 2 chaves idênticas
-        i+=1
-    index+=1
+for i in range(500):
+    ch_hash.insert(keys[i])
     
 ch_hash.display()
 
@@ -36,7 +32,7 @@ ch_hash.search(keys[200])
 ch_hash.search(keys[400])
 
 print()
-print("Busque 3 chaves que não pertençam a Hash Table. Quantos acessos foram necessários para finalizar a busca sem sucesso de cada uma das chaves?")
+print("4) Busque 3 chaves que não pertençam a Hash Table. Quantos acessos foram necessários para finalizar a busca sem sucesso de cada uma das chaves?")
 
 ch_hash.search(2542)
 ch_hash.search(3212)

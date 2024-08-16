@@ -28,7 +28,7 @@ count += linear_hash.search(keys[450])
 print(f"Média da quantidade de acessos = {count/10:.2f}")
 
 print()
-print("3) Busque 10 chaves que não pertençam a Hash Table. Quantos acessos foram necessários para encontrar cada uma das chaves? E na média?")
+print("3) Busque 10 chaves que não pertençam a Hash Table. Quantos acessos foram necessários para finalizar a busca sem sucesso de cada uma das chaves? E na média?")
 
 count = 0   # contador de acessos
 count += linear_hash.search(2354)
@@ -69,7 +69,7 @@ count += quadratic_hash.search(keys[450])
 print(f"Média da quantidade de acessos = {count/10:.2f}")
 
 print()
-print("3) Busque 10 chaves que não pertençam a Hash Table. Quantos acessos foram necessários para encontrar cada uma das chaves? E na média?")
+print("3) Busque 10 chaves que não pertençam a Hash Table. Quantos acessos foram necessários para finalizar a busca sem sucesso de cada uma das chaves? E na média?")
 
 count = 0   # contador de acessos
 count += quadratic_hash.search(2354)
@@ -110,7 +110,7 @@ count += double_hash.search(keys[450])
 print(f"Média da quantidade de acessos = {count/10:.2f}")
 
 print()
-print("3) Busque 10 chaves que não pertençam a Hash Table. Quantos acessos foram necessários para encontrar cada uma das chaves? E na média?")
+print("3) Busque 10 chaves que não pertençam a Hash Table. Quantos acessos foram necessários para finalizar a busca sem sucesso de cada uma das chaves?")
 
 count = 0   # contador de acessos
 count += double_hash.search(2354)
