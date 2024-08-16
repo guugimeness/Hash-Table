@@ -13,6 +13,7 @@ class Chained_Hash():
             return False
         
         self.table[index].append(key)       # inserir key na cabeça da lista
+        return True
         
     def search(self, key):
         index = self.hash_function(key)     # calcular o slot h(key)
@@ -22,18 +23,19 @@ class Chained_Hash():
             count+=1
             if self.table[index][i] == key:
                 print(f"Chave {key} encontrada! O número de acessos nessa busca foi {count}")
-                return True
+                return count
         
         print(f"Chave {key} não encontrada! O número de acessos nessa busca foi {count}")
-        return False
+        return count
     
     def delete(self, key):
         index = self.hash_function(key)     # calcular o slot h(key)
         
         if key not in self.table[index]:    # checar se key está na lista encadeada
-            return
+            raise KeyError(f"A chave {key} não está na tabela!")
             
         self.table[index].remove(key)       # remover a chave da lista
+        return True
         
     def display(self):      # função para imprimir as chaves da tabela
         for i in range(self.m):

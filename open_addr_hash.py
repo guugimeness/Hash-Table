@@ -16,44 +16,49 @@ class Open_Addressing_Hash():
             h2 = 1 + (key % self.M)
             return ((h1) + i*(h2)) % self.m
         else:
-            return
+            raise ValueError(f"{hf} não é um mapeamento válido!")
 
         
     def insert(self, key):
         i = 0
-    
-        while i!=self.m:
-            index = self.hash_function(self.hf, key, i)
+        while i<self.m:     # enquanto i não exceder o número de slots:
+            index = self.hash_function(self.hf, key, i)     # calcular o slot h(key)
             if self.table[index][0] == None:
-                self.table[index][0] = key
-                break
+                self.table[index][0] = key      # inserir caso o slot esteja vazio
+                return True
             i+=1
-        return True
+        raise OverflowError("Não foi possível inserir essa chave: tabela cheia!")
             
     def search(self, key):
         i = 0
-        index = self.hash_function(self.hf, key, i)
+        index = self.hash_function(self.hf, key, i)     # calcular o slot h(key)
     
-        while (i<self.m) and (self.table[index][0] is not None):
+        while (i<self.m) and (self.table[index][0] is not None):    # enquanto i não exceder o número de slots E o slot não for vazio:
             if self.table[index][0] == key:
+                # encontrou o slot com a chave
                 print(f"Chave {key} encontrada! O número de acessos nessa busca foi {i+1}")
                 return i+1
             
             i+=1
-            index = self.hash_function(self.hf, key, i)
+            index = self.hash_function(self.hf, key, i)     # calcular o pŕoximo slot h(key)
         
+        # não encontrou nenhum slot com essa chave
         print(f"Chave {key} não encontrada! O número de acessos nessa busca foi {i+1}")
         return i+1
         
     def delete(self, key):
         i = 0
-        index = self.hash_function(self.hf, key, i)
+        index = self.hash_function(self.hf, key, i)     # calcular o slot h(key)
         
-        while self.table[index] is not None:
-            if self.table[index] == key:
-                self.table[index] = None
+        while (i<self.m) and (self.table[index][0] is not None):    # enquanto i não exceder o número de slots E o slot não for vazio:
+            if self.table[index][0] == key:
+                # encontrou o slot com a chave: slot = None
+                self.table[index][0] = None
                 return True
+            
             i+=1
-
-        return False
+            index = self.hash_function(self.hf, key, i)     # calcular o pŕoximo slot h(key)
+        
+        # não encontrou nenhum slot com essa chave
+        raise KeyError(f"A chave {key} não está na tabela!")
         

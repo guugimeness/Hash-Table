@@ -5,12 +5,15 @@ print("A)")
 
 ch_hash = Chained_Hash(43)
 
-# gerando 600 chaves aleatórias para garantir que 500 diferentes sejam inseridas
-keys = [random.randint(0, 2000) for _ in range(600)]
+keys = [random.randint(1, 2000) for _ in range(550)]
 
 print("1) Inserir 500 chaves geradas aleatoriamente:")
-for i in range(500):
-    ch_hash.insert(keys[i])
+i=0
+index=0
+while i<500:
+    if ch_hash.insert(keys[index]):     # não é permitido inserir 2 chaves idênticas
+        i+=1
+    index+=1
     
 ch_hash.display()
 

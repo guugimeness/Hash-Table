@@ -5,8 +5,7 @@ print("B) i) - Linear Probing")
 
 linear_hash = Open_Addressing_Hash(1019, 1, None, None, None)
 
-# gerando 600 chaves aleatórias para garantir que 500 diferentes sejam inseridas
-keys = [random.randint(0, 2000) for _ in range(600)]
+keys = [random.randint(1, 2000) for _ in range(500)]
 
 print("1) Inserir 500 chaves geradas aleatoriamente...")
 for i in range(500):
@@ -125,7 +124,3 @@ count += double_hash.search(3320)
 count += double_hash.search(3489)
 count += double_hash.search(3654)
 print(f"Média da quantidade de acessos = {count/10:.2f}")
-    
-    
-    
-
