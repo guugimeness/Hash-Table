@@ -13,15 +13,12 @@ A) **Encadeamento lógico**
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Inserir 500 chaves geradas aleatoriamente (valores inteiros de 1 a 2000) utilizando o método da divisão com h(k) = k mod m.  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Imprimir os tamanhos de cada uma das listas encadeadas dos slots e calcular a média.  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Buscar 3 chaves que pertençam a Hash Table. Quantos acessos foram necessários para encontrar cada uma das chaves?  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. Buscar 3 chaves que não pertençam a Hash Table. Quantos acessos foram necessários para finalizar a busca sem sucesso de  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cada uma das chaves?  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. Buscar 3 chaves que não pertençam a Hash Table. Quantos acessos foram necessários para finalizar a busca sem sucesso de cada uma das chaves?  
 
 B) **Endereçamento aberto**  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Testar para: **linear probing**, **quadratic probing** e **double hashing**  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Inserir 500 chaves geradas aleatoriamente (valores inteiros de 1 a 2000).  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Buscar 10 chaves que pertençam a Hash Table. Quantos acessos foram necessários para encontrar cada uma das chaves? E na  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;média?  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Buscar 10 chaves que não pertençam a Hash Table. Quantos acessos foram necessários para finalizar a busca sem sucesso de  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cada uma das chaves? E na média?  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Buscar 10 chaves que pertençam a Hash Table. Quantos acessos foram necessários para encontrar cada uma das chaves? E na média?  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Buscar 10 chaves que não pertençam a Hash Table. Quantos acessos foram necessários para finalizar a busca sem sucesso de cada uma das chaves? E na média?  
 
 ##  Status: Finalizado
